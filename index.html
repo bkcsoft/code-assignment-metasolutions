@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--link rel="stylesheet" href="bower_components/Materialize/dist/font/material-design-icons/Material-Design-Icons.woff"-->
+		<link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/rangy/rangy-core.js"></script>
+	</head>
+	<body class="container" ng-app="app">
+		<div class="row" ng-controller="Comments">
+			<div class="col s6 cyan" ng-mouseup="setTempCommentk()">
+				<h5>Lorem ipsum</h5><p>dolor sit amet, consectetur adipiscing elit. Sed finibus molestie urna, dictum sollicitudin urna laoreet sit amet. Vestibulum sodales ac lorem ut vehicula. Nam vel ultricies leo. Suspendisse nulla libero, laoreet nec pretium varius, malesuada ac ex. Donec pellentesque odio non enim interdum, ac aliquam nunc dictum. Aenean auctor ligula sodales metus auctor, eget ultricies lacus convallis. Fusce congue laoreet odio, id eleifend sapien aliquet aliquet. Vivamus malesuada ac risus quis convallis. Donec velit nunc, congue cursus feugiat sit amet, porta quis lectus. Nam id massa feugiat, consectetur tellus ut, convallis erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas semper ligula convallis risus fringilla pharetra.</p>
+				<h5>Pellentesque semper</h5><p>rhoncus ex, nec consectetur lacus aliquet suscipit. Quisque sed posuere ante, non tristique sapien. Praesent rutrum porta justo ut faucibus. Pellentesque pharetra massa at turpis ultricies ultricies. Nulla nec felis sem. Curabitur commodo nisl magna, fermentum accumsan arcu tincidunt vel. Vivamus mattis erat et augue tempus, a feugiat leo congue. Donec vel risus imperdiet, volutpat risus sed, viverra augue. Maecenas semper posuere justo, sit amet congue neque iaculis ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer eleifend sodales erat, a aliquam purus lacinia ut.</p>
+				<h5>Pellentesque sit</h5><p>amet tellus sit amet lorem congue venenatis at sollicitudin ipsum. In sit amet mauris eu libero malesuada tincidunt a vitae odio. Nullam molestie ornare urna, vitae volutpat leo posuere non. Mauris id fringilla nulla, a semper diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin dignissim fermentum sollicitudin. Cras rhoncus nibh sed sem dictum, nec cursus odio molestie. Donec risus nisi, molestie facilisis risus ut, porttitor hendrerit felis. Nullam non placerat augue. Pellentesque rhoncus, sem aliquet lobortis vehicula, erat turpis sollicitudin odio, vitae ullamcorper tortor neque ut quam. Ut fermentum tincidunt semper.</p>
+				<h5>Nulla placerat</h5><p>id orci non convallis. Curabitur condimentum lorem gravida neque hendrerit, nec maximus elit egestas. Nullam vitae ullamcorper risus, sit amet ultricies nisi. Cras vestibulum, lorem et sollicitudin rhoncus, nunc augue scelerisque arcu, eu rhoncus enim felis sit amet leo. Proin varius erat id faucibus vehicula. Donec blandit turpis urna. Aenean tincidunt consectetur ex eget pretium. Fusce vel blandit dolor. Maecenas vehicula commodo ullamcorper. Aenean nisi nibh, maximus quis elit quis, venenatis vulputate risus. Donec vitae malesuada orci. Morbi et interdum odio, nec ultricies quam. Ut vitae tortor metus. Aenean tincidunt nisl sit amet felis accumsan lacinia.</p>
+				<h5>Nulla tempus</h5><p>augue in convallis mattis. Sed vulputate pulvinar elit id gravida. Sed et nisi at augue mollis volutpat et in tellus. Phasellus ornare neque lectus, ultricies dignissim lectus fringilla viverra. In hac habitasse platea dictumst. Sed dignissim, massa eget elementum lacinia, dolor quam venenatis nisi, nec dictum tellus nunc eu magna. Duis vitae felis pellentesque, vehicula nulla sit amet, dapibus augue.
+			</div>
+			<div class="cyan-lighten col s6">
+				<ul class="collection with-header">
+					<li class="collection-header">Comments<a ng-click="showAddBox()" class="secondary-content btn blue white-text">Add Comment</a></li>
+					<li class="collection-item" ng-class="{hide: added}">
+						<div class="">
+							<h6>Provide a comment on the selected test</h6>
+							<div class="divider"></div>
+							<textarea rows="5" ng-model="tempComment"></textarea>
+							<div class="divider"></div>
+							<a ng-click="closeAddBox()" class="btn white black-text">Close</a><a ng-click="addComment()" class="btn blue">Create Comment</a>
+						</div>
+					</li>
+					<li class="collection-item" ng-repeat="comment in comments" ng-click="showComment($index)">{{comment.comment}}<a ng-click="remComment($index)" class="secondary-content btn red"><i class="material-icons small white-text">close</i></a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body
+</html>

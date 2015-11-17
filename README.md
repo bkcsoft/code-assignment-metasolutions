@@ -35,7 +35,7 @@ valid)
 Also I have no clue if the selection-array can be saved/restored to/from
 localStorage and still be valid, so that has to be tested (I'm assuing
 "broader scale" includes saving stuff...).
-The main-issue being node-references and everything besides the text & comment-list.
+The main-issue being node-references and everything _besides_ the text & comment-list.
 
 Dependencies
 ------------

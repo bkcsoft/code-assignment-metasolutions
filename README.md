@@ -5,7 +5,7 @@ Approach taken
 --------------
 TL;DR; Use as many libs as possible \o/
 
-I've use AngularJS for DOM-manipulation and state-keeping,
+I've used AngularJS for DOM-manipulation and state-keeping,
 and Rangy for Selection-handling.
 I choose AngularJS because I know it, and it is in my opinion
 cleaner than using e.g. jQuery.  
@@ -27,7 +27,7 @@ Challenges for a using on a broader scale
 -----------------------------------------
 TL;DR; Bug-fixes and serious refactoring...
 
-Too use this on a broader scale I'd have to refactor it for better scoping.  
+To use this on a broader scale I'd have to refactor it for better scoping.  
 First and foremost, the selection is buggy as h*ll and theres
 a bunch of work-arounds to make it _act_ less buggy. (Basically there's no way
 to know if something is actually highlighted, and if said highlight is still
